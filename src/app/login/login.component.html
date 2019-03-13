@@ -1,0 +1,42 @@
+<div class="container loginContainer" *ngIf="!loginLoaded">
+    <div class="title">
+        Wakanda Demo
+    </div>
+    <section>
+    </section>
+    <div class="buttons">
+        <button class="button button-primary" (click)="subscribeToNotifications()"
+                [disabled]="sub">Subscribe</button>
+        <button class="button button-danger" (click)="sendNewsletter()">Send</button>
+    </div>
+    <section>
+    </section>
+    <div class="ui-g" style="width:100%;margin-bottom:10px">
+        <div class="ui-g-12">
+            <p-radioButton name="group2" value="option1" label="Voulez-vous vous enregistrer?" [(ngModel)]="user.userOption" inputId="preopt1"></p-radioButton>
+        </div>
+        <div class="ui-g-12">
+            <p-radioButton name="group2" value="option2" label="Voulez-vous consulter les informations pour un joueur?" [(ngModel)]="user.userOption"
+                inputId="preopt2"></p-radioButton>
+        </div>
+    </div>
+    <section>
+    </section>
+    <div class="row">
+        <div class="input-field col s12">
+            <input  [(ngModel)]="user.logon" id="logon" type="text" placeholder="votreNom@site.be" class="validate">
+            <label for="logon">adresse Mail</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <input [(ngModel)]="user.password"  id="password" type="password" class="validate">
+            <label for="password">Mot de Passe</label>
+        </div>
+    </div>
+    <section>
+    </section>
+    <span style="padding-left: 10px">{{errorMsg}}</span>
+    <button (click)="login()" class="btn left black" type="submit" name="action">Login</button>
+</div>
+<router-outlet *ngIf="loginLoaded"></router-outlet>

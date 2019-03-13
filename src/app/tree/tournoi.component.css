@@ -1,0 +1,53 @@
+.tree {
+    font-size: 0.65em;
+}
+.init {
+    margin-bottom: 5px;
+}
+.init span {
+    margin-left: 5px; 
+}
+span.entreeTableau{
+    font-size: 0.65em;
+}
+.ng-star-inserted{
+    width: 140px;
+    font-size: 0.75em;
+    background-color: seashell
+}
+HR{
+    margin-bottom:-4px;
+    margin-top:-4px;
+    size:1px;
+}
+div{
+    margin-bottom:-4px;
+    margin-top:-4px;
+}
+label {
+    font-size: 0.75em;
+}
+input { 
+    margin-left: 5px;
+}
+span.ui-tree-toggler.fa.fa-fw.fa-minus.ng-star-inserted{
+    /* ne fonctionne pas */
+    visibility: hidden;
+}
+p-tree{
+    direction: rtl;
+}
+div.tournoi{
+    direction: ltr;
+}
+.sidebar-wrapper{
+        /* ne fonctionne pas */
+    border: none
+}
+input:invalid {
+    border: 1px dashed red;
+  }
+  
+  input:valid {
+    border: 1px solid black;
+  }

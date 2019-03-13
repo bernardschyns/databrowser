@@ -1,0 +1,9 @@
+section{
+	font-weight: normal;
+	font-size: 110%;
+	line-height: 135%;
+	margin: 3px 3px 3px 3px;
+	width: auto;
+	padding: 12px 1% 0 1%;
+	border-bottom: 2px dotted #ccc
+}

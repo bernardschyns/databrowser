@@ -1,0 +1,57 @@
+[
+"
+console.log(\"fonction 0 bonjour\");
+api.setDataClass({ name: \"Joueur\",template:\"Joueur3\"});
+confirm.confirm({acceptVisible:false,rejectVisible:false,message: \"choisissez le nom de votre joueur\" })();
+",
+"
+console.log(\"fonction 0 bonjour\");
+api.setDataClass({ name: \"Joueur\",template:\"Joueur\",filter:\"ID==\"+ID });
+confirm.confirm({acceptVisible:false,rejectVisible:false,message: \"ajustez vos horaires en déplaçant les blocs ou les curseurs ! Ensuite, validez vos modifications tout en bas de l'écran\" })();
+",
+"console.log(\"fonction 0 adieu\");
+api.setDataClass({ name: this.className, save: true,filter:\"\" });
+api.setDataClass({ name: \"Joueur\",template:\"Joueur1\",filter:\"ID==\"+ID });
+confirm.confirm({acceptVisible:false,rejectVisible:false,message: \"deuxième salve\" })();
+api.setDataClass({ name: this.className, save: true,filter:\"\" });
+",
+ "console.log(\"fonction 1 aurevoir\");
+api.setDataClass({ name: this.className, save: true,filter:\"\" });
+api.setDataClass({ name: \"Categorie\"})
+ "
+]
+
+
+
+[
+"
+if (userOption == \"option2\") {
+api.setDataClass({ name: \"Joueur\", template: \"Joueur3\" });
+message = \"choisissez le nom de votre joueur, ensuite TAB pour visualiser ses données\";
+confirm.confirm({ acceptVisible: false, rejectVisible: false, message: message });
+} else {
+this.next();
+}
+" ,
+"
+console.log(\"fonction 1 aurevoir\");       
+if (userOption == \"option2\") {
+api.setDataClass({ name: \"Joueur\", template: \"Joueur\" });
+}
+else { api.setDataClass({ name: \"Joueur\", template: \"Joueur\", filter: \"ID==\" + ID }); }
+message = (userOption == \"option2\") ? \"voici les données du joueur, ensuite TAB pour consulter ses horaires de jeu\" : \"compléter vos données de joueur, ensuite TAB pour consulter vos horaires de jeu \"
+confirm.confirm({ acceptVisible: false, rejectVisible: false, message: message })
+" ,
+"
+api.setDataClass({ name: \"Joueur\", save: true });
+api.setDataClass({ name: \"Joueur\", template: \"Joueur1\" });
+message = (userOption == \"option1\") ? \"ajustez vos horaires en déplaçant les blocs ou les curseurs ! Ensuite, TAB pour valider  vos modifications tout en bas de l'écran\" : \"consultez les horaires de votre Joueur ! Ensuite, TAB pour la suite de la visite\"
+confirm.confirm({ acceptVisible: false, rejectVisible: false, message: message });
+api.setDataClass({ name: this.className, save: true, filter: \"\" });
+",
+"
+api.setDataClass({ name: \"Joueur\", save: true });
+message = \"Merci de votre visite\";
+confirm.confirm({ acceptVisible: false, rejectVisible: false, message: message });
+"
+]

@@ -1,0 +1,30 @@
+
+header{
+    position: absolute;
+    top:10%;
+    height: 70%;
+    width: 95%;
+    overflow: scroll;
+
+}
+footer{
+    position: absolute;
+    top:80%;
+    height: 25%;
+    width: 100%;
+}
+fieldset{
+    margin:15px;
+    background-color: floralwhite;
+    width: 565px;
+    height: 120px;
+    border: thick double #32a1ce;
+    // position: absolute;
+    // top: 80px;
+    // left: 40%;
+    z-index: 10;
+}
+p-button.ui-button-warning{
+    color: greenyellow
+}
+.row.content {height:auto;}

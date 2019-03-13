@@ -1,0 +1,56 @@
+input {
+	color:black;
+	font-size:2rem;
+	text-align: center;
+}
+
+.loginContainer{
+	width:600px;
+	height:550px;
+	margin:100px auto;
+	box-shadow: 2px 3px 15px -4px;
+	background:white;
+}
+
+.content{
+	height:250px;
+	text-align: center;
+	padding: 30px;
+
+}
+
+.content span{
+	margin-bottom: 30px;
+}
+
+.title{
+	width:100%;
+	height:60px;
+	font-size: 28px;
+	color: black;
+	padding: 10px;
+	// background: #;
+}
+.row,
+.panel-body{
+	padding: 15px;
+}
+
+.panel-body span{
+	color:red;
+}
+.panel-body button{
+	float:right;
+}
+section{
+	font-weight: normal;
+	font-size: 110%;
+	line-height: 135%;
+	margin: 3px 3px 3px 3px;
+	width: auto;
+	padding: 12px 1% 0 1%;
+	border-top: 2px dotted #ccc
+}
+label{
+	margin-left: 5px;
+}

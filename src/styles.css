@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+.ag-theme-balham .sick-days-warning {
+    /* background-color: sandybrown !important; */
+    display:none;
+    height: 4px;
+}
+.ag-theme-balham .sick-days-breach {
+    background-color: lightcoral !important;
+}

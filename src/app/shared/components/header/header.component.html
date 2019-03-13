@@ -1,0 +1,20 @@
+<header>
+  <nav>
+    <div class="container-fluid text-center">
+      <span>
+        <a href="" class="brand-logo center">Wakanda</a>
+      </span>
+
+      <span routerLinkActive="active">
+        <a [routerLink]="['/home']">Home</a>
+      </span>
+      <span routerLinkActive="active">
+        <a [routerLink]="['/employees']">Employees</a>
+      </span>
+      <span>
+        <a (click)="logout()">Log out</a>
+      </span>
+
+    </div>
+  </nav>
+</header>

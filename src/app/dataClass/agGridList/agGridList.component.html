@@ -1,0 +1,39 @@
+<div class="container-fluid text-center">
+    <div class="row content">
+        <div #ag class="myClass">
+            <ag-grid-angular [ngStyle]="agGridListStyle" [enableSorting]="true" [enableFilter]="true" (gridReady)="onGridReady($event)"
+                (rowDataChanged)="onRowDataChanged($event)" class="ag-theme-balham" [rowData]="rowData[collectionClass]" [columnDefs]="columnDefs[collectionClass]" [frameworkComponents]="frameworkComponents"
+                [enableColResize]="true" [navigateToNextCell]="navigateToNextCell" [rowSelection]="rowSelection" (selectionChanged)="onSelectionChanged($event)" 
+                (cellValueChanged)="onCellValueChanged($event)" [defaultColDef]="defaultColDef" 
+                [rowDragManaged]="true" (rowDragEnter)="onRowDragEnter($event)" (rowDragEnd)="onRowDragEnd($event)"
+                [rowClassRules]="rowClassRules" [getRowHeight]="getRowHeight"
+                >
+            </ag-grid-angular>
+        </div>
+        <modal-modal2 [appMoveTemplate]="condition" count></modal-modal2>
+        <div *ngIf="totalAttribute" class="total">
+            <div>
+                <label class="dataLabel" for="Field19">Total htva</label>
+                <input class="dataTotal" id="Field19" name="Field19" type="text" [(ngModel)]="agGridListTotal" size="25" tabindex="1" placeholder=""
+                />
+            </div>
+            <div>
+                <label class="dataLabel" for="Field19">TVA 21%</label>
+                <input class="dataTotal" id="Field19" name="Field19" type="text" [(ngModel)]="agGridListTVA" size="25" tabindex="1" placeholder=""
+                />
+            </div>
+            <section>
+                </section>
+            <div>
+                <label class="dataLabel" for="Field19">TOTAL tva/incl</label>
+                <input class="dataTotal" id="Field19" name="Field19" type="text" [(ngModel)]="agGridListTotalTVA" size="25" tabindex="1" placeholder=""
+                />
+            </div>
+        </div>
+        <!-- <p-confirmDialog header="Confirmation" appendTo="body" icon="fa fa-question-circle" width="425"></p-confirmDialog> -->
+    </div>
+    <!-- <div class="row content">
+        <ng-container *ngTemplateOutlet="modal1">
+        </ng-container>
+    </div> -->
+</div>

@@ -1,0 +1,41 @@
+<li class="buttons ">
+        <div>
+            <input id="saveForm" name="saveForm" class="btTxt submit" type="button" (click)="submit()" value="Submit" />
+        </div>
+    </li>
+<p-tree class="tree" [value]="data" layout="horizontal" (onNodeExpand)="loadNode($event)" [propagateSelectionUp]="true" [propagateSelectionDown]="false"
+    selectionMode="single" (onNodeSelect)="nodeSelect($event)" [(selection)]="selectedNode">
+    <ng-template let-node pTemplate="match">
+        <div class="tournoi" style="height:50px;width:120px">
+            <div>
+                <label>Joueur_1: </label>
+                <input [(ngModel)]="node.joueur1" style="width:70%" />
+            </div>
+            <!-- <HR align=center> -->
+            <div>
+                <label>Score: </label>
+                <input type="text" style="width:70%" (change)="scoreChanged(event)" [(ngModel)]="node.score" pattern="|^(([0-6]{1,1}[/]{1,1}[0-6]{1,1}[-]{0,1}){2,3}$)"
+                />
+            </div>
+            <!-- <HR align=center> -->
+            <div>
+                <label>Joueur_2: </label>
+                <input style="width:70%" type="text" [(ngModel)]="node.joueur2" />
+            </div>
+        </div>
+    </ng-template>
+    <ng-template let-node pTemplate="joueur">
+        <div style="height:50px;width:120px">
+        </div>
+        <HR align=center size=0>
+        <span class="entreeTableau">mon joueur est {{node.joueur}} </span>
+        <HR align=center size=0>
+
+    </ng-template>
+    <ng-template let-node pTemplate="vide">
+        <div style="height:0px;width:120px">
+        </div>
+    </ng-template>
+</p-tree>
+<!-- ^([0-6]+[.- ]+[0-6]]
+|^([a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$) -->

@@ -1,0 +1,128 @@
+<!-- on a mis cela dans noteenvoi noteenvoi -->
+<ng-template #NoteEnvoi>
+    <div>
+        <label class="dataLabel" for="Field19">Note Envoi</label>
+        <input class="dataListe" id="Field19" name="Field19" type="text" [(ngModel)]="entity.noteEnvoi" size="25" tabindex="1" placeholder=""
+        />
+    </div>
+    <div>
+        <label class="dataLabel" for="Field9">nom du client</label>
+        <p-autoComplete class="dataListe" *ngIf="entity.company" (onSelect)="scoreChanged(event,'company')" 
+            [(ngModel)]="entity.company" field="name" [suggestions]="selectData" (completeMethod)="filterBrands($event,'Company','name')" [size]="25"
+            [minLength]="1" [placeholder]="entity.company.name" [dropdown]="true" [ngModelOptions]="{standalone: true}">
+            <ng-template let-brand pTemplate="item">
+                <div class="ui-helper-clearfix" style="border-bottom:1px solid #D5D5D5">
+                    <div style="font-size:12px;float:left;margin:10px 10px 0 0">{{brand.name}}</div>
+                </div>
+            </ng-template>
+        </p-autoComplete>
+    </div>
+    <div>
+        <label class="dataLabel" for="Field19">Descriptif</label>
+        <input class="dataListe" id="Field19" name="Field19" type="text" [(ngModel)]="entity.descriptif" size="25" tabindex="1" placeholder=""
+        />
+    </div>
+</ng-template>
+<!-- on a mis cela dans noteenvoiinpage -->
+<ng-template #NoteEnvoi>
+    <div [ngStyle]="backgroundStyle">
+    </div>
+    <modal-modal1 [appMoveTemplate]="condition" count></modal-modal1>
+    <noteenvoi-noteenvoiliste [appMoveTemplate]="condition" count></noteenvoi-noteenvoiliste>
+    <noteenvoi-noteenvoi [appMoveTemplate]="condition" count></noteenvoi-noteenvoi>
+    <company-companyadresse [appMoveTemplate]="condition" count></company-companyadresse>
+</ng-template>
+
+<!-- on a mis cela dans noteenvoi adresse -->
+<ng-template #NoteEnvoi>
+    <div class="container clearfix">
+        <input pInputText id="pays" class="_input _input-1 js-pays" name="pays" type="text">
+    </div>
+</ng-template>
+
+<!-- on a mis cela dans noteenvoiliste -->
+<ng-template #NoteEnvoi>
+    <div class="" [ngStyle]="{'width': '600px','height': '400px'}">
+        <app-ag-grid-list data-dataClass="ObjetEnCommande" data-collection="objetEnCommandeCollection"
+            data-source="noteEnvoi" data-dataListe="ObjetEnCommande1"></app-ag-grid-list>
+    </div>
+</ng-template>
+<!-- on a mis cela dans le style de companyadresse -->
+<style #macaw-companyadresse>
+    body {
+        background-color: rgb(255, 255, 255);
+        font-size: 1em;
+    }
+
+    .container {
+        position: absolute;
+        top: 56px;
+        left: 14.4166666666%;
+        z-index: 6;
+        width: 200px;
+        height: 100px;
+        border: 1px solid rgb(77, 77, 77);
+        border-radius: 10px;
+    }
+
+    ._input {
+        display: block;
+        position: absolute;
+        height: 15px;
+        padding: 0 10px;
+        border: 1px dotted rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        font: 400 0.688em/1.38 Helvetica;
+        color: rgb(0, 0, 0);
+    }
+
+    .container ._input-1 {
+        top: 80px;
+        left: 9px;
+        z-index: 5;
+        width: 100px;
+    }
+
+    .container ._input-2 {
+        top: 62px;
+        left: 84px;
+        z-index: 4;
+        width: 104px;
+    }
+
+    .container ._input-3 {
+        top: 62px;
+        left: 8px;
+        z-index: 3;
+        width: 50px;
+    }
+
+    .container ._input-4 {
+        top: 43px;
+        left: 9px;
+        z-index: 2;
+        width: 180px;
+    }
+
+    .container ._input-5 {
+        top: 25px;
+        left: 9px;
+        z-index: 1;
+        width: 180px;
+    }
+
+    .container ._input-6 {
+        top: 6px;
+        left: 9px;
+        width: 180px;
+    }
+</style>
+<!-- les positions pour company -->
+{"company-companyliste":{"posX":"200px","posY":"400px"},"company-companyadresse":{"posX":"350px","posY":"50px"}} 
+{"noteenvoi-noteenvoiliste":{"posX":"50px","posY":"400px"},"noteenvoi-noteenvoi":{"posX":"50px","posY":"250px"},
+"company-companyadresse":{"posX":"350px","posY":"200px"},"modal-modal1":{"posX":"350px","posY":"400px"},"modal-modal2":{"posX":"350px","posY":"400px"}}
+
+<!-- les listes pour ObjetEnCommande-->
+{"liste":{"ordre":{"width":0},"qte":{"width":100},"descriptif":{"width":300},"prix":{"width":100},"sousTotal":{"width":100}}}
+<!-- on a mis cela dans le style de noteenvoinoteenvoi -->
+input,p-autocomplete { background-color: rgb(255, 255, 255); font-size: 1em; }

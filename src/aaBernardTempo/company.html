@@ -1,0 +1,296 @@
+<!-- on a mis cela dans Company classique par wufoo -->
+<ng-template #Company>
+    <form id="form4" name="form4" class="wufoo  page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data"
+        method="post" novalidate action="https://bernardschyns.wufoo.com/forms/rncnmb906wk76w/#public">
+
+        <header id="header" class="info">
+            <h2 class="">Time Sheet</h2>
+            <div class=""></div>
+            <div class="" [ngStyle]="{'width': '600px','height': '400px'}">bonjour à ma div
+                <!-- <ag-grid-angular id="CollectionEmployee" data-dataClass="Employee" data-dataListe="Employee1" data-collection="employees" style="width: 500px; height: 400px;"
+                    class="ag-theme-balham" [rowData]="rowData['Employee']" [columnDefs]="columnDefs['Employee']">
+                </ag-grid-angular> -->
+            </div>
+        </header>
+        <ul>
+            <li id="foli19" class="notranslate leftHalf     ">
+                <label class="desc" id="title19" for="Field19">
+                    Employee Name
+                </label>
+                <span>
+                    <input id="Field19" name="Field19" type="text" class="field text fn" [(ngModel)]="entity.name" size="8" tabindex="1" placeholder=""
+                    />
+                    <label for="Field19">First</label>
+                </span>
+                <span>
+                    <input id="Field20" name="Field20" type="text" class="field text ln" value="" size="14" tabindex="2" placeholder="" />
+                    <label for="Field20">Last</label>
+                </span>
+            </li>
+            <li id="foli11" class="rightHalf      ">
+                <label class="desc notranslate" id="title11" for="Field11">
+                    Project Name
+                </label>
+                <div>
+                    <select id="Field11" name="Field11" class="field select medium" tabindex="3">
+                        <option value="" selected="selected">
+                            <span class="notranslate"></span>
+                        </option>
+                        <option value="Acme Web Site">
+                            <span class="notranslate">Acme Web Site</span>
+                        </option>
+                        <option value="Bob&#039;s Advertisement">
+                            <span class="notranslate">Bob's Advertisement</span>
+                        </option>
+                        <option value="Jill&#039;s Video">
+                            <span class="notranslate">Jill's Video</span>
+                        </option>
+                    </select>
+                </div>
+            </li>
+            <li id="foli4" class="date notranslate leftHalf     ">
+                <label class="desc" id="title4" for="Field4">
+                    Date
+                </label>
+                <span>
+                    <input id="Field4-1" name="Field4-1" type="text" class="field text" value="" size="2" maxlength="2" tabindex="4" />
+                    <label for="Field4-1">MM</label>
+                </span>
+                <span class="symbol">/</span>
+                <span>
+                    <input id="Field4-2" name="Field4-2" type="text" class="field text" value="" size="2" maxlength="2" tabindex="5" />
+                    <label for="Field4-2">DD</label>
+                </span>
+                <span class="symbol">/</span>
+                <span>
+                    <input id="Field4" name="Field4" type="text" class="field text" value="" size="4" maxlength="4" tabindex="6" />
+                    <label for="Field4">YYYY</label>
+                </span>
+                <span id="cal4">
+                    <img id="pick4" class="datepicker" src="../assets/images/calendar.png" alt="Pick a date." data-date-format="yyyy-mm-dd" data-date="2018-08-29"
+                    />
+                </span>
+            </li>
+            <li id="foli7" class="notranslate rightHalf     ">
+                <label class="desc" id="title7" for="Field7">
+                    Rate Per Hour
+                </label>
+                <span class="symbol">$</span>
+                <span>
+                    <input id="Field7" name="Field7" type="text" class="field text currency nospin" value="" size="10" tabindex="7" />
+                    <label for="Field7">Dollars</label>
+                </span>
+                <span class="symbol radix">.</span>
+                <span class="cents">
+                    <input id="Field7-1" name="Field7-1" type="text" class="field text nospin" value="" size="2" maxlength="2" tabindex="8" />
+                    <label for="Field7-1">Cents</label>
+                </span>
+            </li>
+            <li id="foli10" class="time notranslate leftHalf     ">
+                <label class="desc" id="title10" for="Field10">
+                    Start Time
+                </label>
+                <span class="hours">
+                    <input id="Field10" name="Field10" type="text" class="field text" value="" size="2" maxlength="2" tabindex="9" />
+                    <label for="Field10">HH</label>
+                </span>
+                <span class="symbol minutes">:</span>
+                <span class="minutes">
+                    <input id="Field10-1" name="Field10-1" type="text" class="field text" value="" size="2" maxlength="2" tabindex="10" />
+                    <label for="Field10-1">MM</label>
+                </span>
+                <span class="symbol seconds">:</span>
+                <span class="seconds">
+                    <input id="Field10-2" name="Field10-2" type="text" class="field text" value="" size="2" maxlength="2" tabindex="11" />
+                    <label for="Field10-2">SS</label>
+                </span>
+                <span class="ampm">
+                    <select id="Field10-3" name="Field10-3" class="field select" style="width:4em" tabindex="12">
+                        <option value="AM" selected="selected">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                    <label for="Field10-3">AM/PM</label>
+                </span>
+            </li>
+            <li id="foli21" class="time notranslate rightHalf     ">
+                <label class="desc" id="title21" for="Field21">
+                    End Time
+                </label>
+                <span class="hours">
+                    <input id="Field21" name="Field21" type="text" class="field text" value="" size="2" maxlength="2" tabindex="13" />
+                    <label for="Field21">HH</label>
+                </span>
+                <span class="symbol minutes">:</span>
+                <span class="minutes">
+                    <input id="Field21-1" name="Field21-1" type="text" class="field text" value="" size="2" maxlength="2" tabindex="14" />
+                    <label for="Field21-1">MM</label>
+                </span>
+                <span class="symbol seconds">:</span>
+                <span class="seconds">
+                    <input id="Field21-2" name="Field21-2" type="text" class="field text" value="" size="2" maxlength="2" tabindex="15" />
+                    <label for="Field21-2">SS</label>
+                </span>
+                <span class="ampm">
+                    <select id="Field21-3" name="Field21-3" class="field select" style="width:4em" tabindex="16">
+                        <option value="AM" selected="selected">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                    <label for="Field21-3">AM/PM</label>
+                </span>
+            </li>
+            <li id="foli9" class="notranslate      ">
+                <label class="desc" id="title9" for="Field9">
+                    Notes
+                </label>
+
+                <div>
+                    <textarea id="Field9" name="Field9" class="field textarea small" spellcheck="true" rows="10" cols="50" tabindex="17" onkeyup=""
+                        placeholder=""></textarea>
+
+                </div>
+            </li>
+            <li class="buttons ">
+                <div>
+
+                    <input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Submit" />
+                </div>
+            </li>
+
+            <li class="hide">
+                <label for="comment">Do Not Fill This Out</label>
+                <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+                <input type="hidden" id="idstamp" name="idstamp" value="31uKzpm8WFuP/wHAuSMxoDv1XDabtj0rialNfXKa7Tw=" />
+            </li>
+        </ul>
+    </form>
+</ng-template>
+<!-- on a mis cela dans companyinpage -->
+<ng-template #Company>
+    <modal-modal1 [appMoveTemplate]="condition" count></modal-modal1>
+    <company-companyliste [appMoveTemplate]="condition" count></company-companyliste>
+    <company-companyadresse [appMoveTemplate]="condition" count></company-companyadresse>
+</ng-template>
+
+<!-- on a mis cela dans company adresse -->
+<ng-template #Company>
+    <div *ngIf="entity" class="container clearfix">
+        <span>
+            <!-- <label for="name">Company</label> -->
+            <input id="name" [(ngModel)]="entity.name" (ngModelChange)="dataChanged($event)" name="name" size="12" class="_input _input-6 js-joueur"
+                tabindex="1" />
+        </span>
+        <span>
+            <!-- <label for="nomDeRue">nomDeRue</label> -->
+            <input id="nomDeRue" [(ngModel)]="entity.nomDeRue" (ngModelChange)="dataChanged($event)" name="nomDeRue" size="12" class="_input _input-5 js-nom-de-rue"
+                tabindex="2" />
+        </span>
+        <span>
+            <!-- <label for="nomDeRueSuite">nomDeRueSuite</label> -->
+            <input id="nomDeRueSuite" [(ngModel)]="entity.nomDeRueSuite" (ngModelChange)="dataChanged($event)" name="nomDeRueSuite" size="12"
+                class="_input _input-4 js-nom-de-rue-s" tabindex="3" />
+        </span>
+        <span>
+            <!-- <label for="codePostal">codePostal</label> -->
+            <input id="codePostal" [(ngModel)]="entity.codePostal" (ngModelChange)="dataChanged($event)" name="codePostal" size="12"
+                class="_input _input-3 js-code-pos" tabindex="4" />
+        </span>
+        <span>
+            <!-- <label for="ville">ville</label> -->
+            <input id="ville" [(ngModel)]="entity.ville" (ngModelChange)="dataChanged($event)" name="ville" size="12" class="_input _input-2 js-ville"
+                tabindex="5" />
+        </span>
+        <span>
+            <!-- <label for="countryName">ville</label> -->
+            <input id="countryName" [(ngModel)]="entity.countryName" (ngModelChange)="dataChanged($event)" name="countryName" size="12"
+                class="_input _input-1 js-pays" tabindex="6" />
+        </span>
+        <!-- <input pInputText [(ngModel)]="entity.countryName" id="pays" class="_input _input-1 js-pays" name="pays" type="text">
+        <input pInputText [(ngModel)]="entity.ville" id="ville" class="_input _input-2 js-ville" name="ville" type="text">
+        <input pInputText [(ngModel)]="entity.codePostal" id="codePos" class="_input _input-3 js-code-pos" name="codePos" type="text">
+        <input pInputText [(ngModel)]="entity.nomDeRueSuite" id="nomDeRueS" class="_input _input-4 js-nom-de-rue-s" name="nomDeRueS"
+            type="text">
+        <input pInputText [(ngModel)]="entity.nomDeRue" id="nomDeRue" class="_input _input-5 js-nom-de-rue" name="nomDeRue" type="text">
+        <input pInputText [(ngModel)]="entity.name" id="joueur" class="_input _input-6 js-joueur" name="joueur" type="text"> -->
+    </div>
+</ng-template>
+
+<!-- on a mis cela dans companyliste -->
+<ng-template #Company>
+    <div class="" [ngStyle]="{'width': '600px','height': '200px'}">
+        <app-ag-grid-list data-dataClass="Employee" data-collection="employees" data-source="company" data-dataListe="Employee1"></app-ag-grid-list>
+    </div>
+</ng-template>
+
+<!-- on a mis cela dans le style de companyadresse -->
+<style #macaw-companyadresse>
+    body {
+        background-color: rgb(255, 255, 255);
+        font-size: 1em;
+    }
+
+    .container {
+        position: absolute;
+        top: 56px;
+        left: 14.4166666666%;
+        z-index: 6;
+        width: 200px;
+        height: 100px;
+        border: 1px solid rgb(77, 77, 77);
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    ._input {
+        display: block;
+        position: absolute;
+        height: 15px;
+        padding: 0 10px;
+        border: 1px dotted rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        font: 400 0.688em/1.38 Helvetica;
+        color: rgb(0, 0, 0);
+    }
+
+    .container ._input-1 {
+        top: 80px;
+        left: 9px;
+        z-index: 5;
+        width: 100px;
+    }
+
+    .container ._input-2 {
+        top: 62px;
+        left: 84px;
+        z-index: 4;
+        width: 104px;
+    }
+
+    .container ._input-3 {
+        top: 62px;
+        left: 8px;
+        z-index: 3;
+        width: 50px;
+    }
+
+    .container ._input-4 {
+        top: 43px;
+        left: 9px;
+        z-index: 2;
+        width: 180px;
+    }
+
+    .container ._input-5 {
+        top: 25px;
+        left: 9px;
+        z-index: 1;
+        width: 180px;
+    }
+
+    .container ._input-6 {
+        top: 6px;
+        left: 9px;
+        width: 180px;
+    }
+</style>
+<!-- les positions pour company -->
+{"company-companyliste":{"posX":"200px","posY":"400px"},"company-companyadresse":{"posX":"400px","posY":"200px"}}

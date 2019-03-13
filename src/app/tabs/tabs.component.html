@@ -1,0 +1,51 @@
+<ng-template #modal2>
+    <fieldset draggable="true" #modalMove2>
+        <span>
+            <p-button class="add" (click)="prev()" icon="fa fa-chevron-circle-left" style="font-size: 1.5em"></p-button>
+        </span>
+        <span>
+            <p-button class="add" (click)="_saveEntity()" icon="fa fa-check" styleClass="ui-button-success" style="font-size: 1.5em"></p-button>
+        </span>
+        <span>
+            <p-button class="add" (click)="next()" icon="fa fa-chevron-circle-right" style="font-size: 1.5em"></p-button>
+        </span>
+    </fieldset>
+</ng-template>
+<div class="container-fluid text-center">
+    <app-header> </app-header>
+
+    <ul class="nav nav-tabs">
+        <li *ngFor="let tab of dynamicTabs" (click)="selectTab(tab)" [class.active]="tab.active">
+            <a>{{tab.title}}
+                <span class="tab-close" *ngIf="tab.isCloseable" (click)="closeTab(tab)">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+            </a>
+        </li>
+    </ul>
+    <div class="container-fluid text-center">
+        <div class="row content text-center">
+            <ng-content></ng-content>
+            <ng-template dynamic-tabs #container></ng-template>
+            <ng-template let-dataClass="dataClass" #dataClass>
+                <ng-container *ngIf="tabsInited">
+                    <app-ag-grid></app-ag-grid>
+                </ng-container>
+            </ng-template>
+            <ng-template let-tree="tree" #tree>
+                <app-tree></app-tree>
+            </ng-template>
+            <!-- <p-confirmDialog header="Confirmation" appendTo="body" icon="fa fa-question-circle" width="425">
+                <p-footer>
+                </p-footer>
+            </p-confirmDialog> -->
+        </div>
+        <div class="row content text-center" *ngIf="adminData && adminData.isVisit">
+            <ng-container *ngTemplateOutlet="modal2">
+            </ng-container>
+        </div>
+    </div>
+
+
+
+</div>

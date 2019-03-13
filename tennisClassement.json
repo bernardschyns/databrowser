@@ -1,0 +1,88 @@
+{
+  "rows" : [
+    {
+      "Classement" : "A international",
+      "Points" : "115"
+    },
+    {
+      "Classement" : "A national",
+      "Points" : "110"
+    },
+    {
+      "Classement" : "B-15.4",
+      "Points" : "105"
+    },
+    {
+      "Classement" : "B-15.2",
+      "Points" : "100"
+    },
+    {
+      "Classement" : "B-15.1",
+      "Points" : "95"
+    },
+    {
+      "Classement" : "B-15",
+      "Points" : "90"
+    },
+    {
+      "Classement" : "B-4/6",
+      "Points" : "85"
+    },
+    {
+      "Classement" : "B-2/6",
+      "Points" : "80"
+    },
+    {
+      "Classement" : "B0",
+      "Points" : "75"
+    },
+    {
+      "Classement" : "B+2/6",
+      "Points" : "70"
+    },
+    {
+      "Classement" : "B+4/6",
+      "Points" : "65"
+    },
+    {
+      "Classement" : "C15",
+      "Points" : "60"
+    },
+    {
+      "Classement" : "C15.1",
+      "Points" : "55"
+    },
+    {
+      "Classement" : "C15.2",
+      "Points" : "50"
+    },
+    {
+      "Classement" : "C15.3",
+      "Points" : "45"
+    },
+    {
+      "Classement" : "C15.4",
+      "Points" : "40"
+    },
+    {
+      "Classement" : "C15.5",
+      "Points" : "35"
+    },
+    {
+      "Classement" : "C30",
+      "Points" : "30"
+    },
+    {
+      "Classement" : "C30.1",
+      "Points" : "25"
+    },
+    {
+      "Classement" : "C30.2",
+      "Points" : "20"
+    },
+    {
+      "Classement" : "C30.3",
+      "Points" : "15"
+    }
+  ]
+}

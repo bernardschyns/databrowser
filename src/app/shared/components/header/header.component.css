@@ -1,0 +1,26 @@
+
+    
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 30px;
+    /* line-height: -5px; */
+    font-size: 0,5rem;
+    background-color: crimson ;
+}
+
+
+header {
+  background-color: #fff;
+  /* padding: 5px; */
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5); */
+}
+div{
+  display:table;
+}
+span{
+  display:table-cell;
+  text-align:center; 
+}

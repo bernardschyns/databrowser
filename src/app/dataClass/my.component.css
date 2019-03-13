@@ -1,0 +1,8 @@
+input,p-autocomplete {
+    background-color: rgb(255, 255, 255);
+    font-size: 1em;
+  }
+.ui-autocomplete {
+    background-color: greenyellow;
+    font-size: 1em;
+}

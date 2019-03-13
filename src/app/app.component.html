@@ -1,0 +1,16 @@
+<div class="wrapper">
+    <div [class.sidebar]="adminData && adminData.isAdmin"  class="sidebar" data-color="red" data-image="">
+        <app-sidebar (catalogLoad)="catalogLoad($event)" (visitLoad)="visitLoad($event)" *ngIf="!isVisitLoad"></app-sidebar>
+        <div class="sidebar-background" style="background-image: url(/assets/img/sidebar-4.jpg)"></div>
+    </div>
+    <div [class.main-panel]="adminData && adminData.isAdmin">
+        <!-- <navbar-cmp></navbar-cmp> -->
+        <!-- <router-outlet></router-outlet> -->
+        <app-tabs  *ngIf="isCatalogLoad"></app-tabs>
+    </div>
+</div>
+<p-growl [(value)]="msgs"></p-growl>
+<p-confirmDialog header="Confirmation" appendTo="body" icon="fa fa-question-circle" width="425"></p-confirmDialog>
+
+
+

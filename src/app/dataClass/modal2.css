@@ -1,0 +1,16 @@
+fieldset{
+    background-color: floralwhite;
+    width: 400px;
+    height: 120px;
+    border: thick double #32a1ce;
+    /* position: absolute;
+    top: 80px;
+    left: 40%; */
+    z-index: 100;
+}
+p-button.ui-button-warning{
+    color: greenyellow
+}
+button{
+    background: greenyellow
+}

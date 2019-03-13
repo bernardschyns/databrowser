@@ -1,0 +1,63 @@
+<ng-template #modal1>
+    <fieldset #modalMove>
+        <div style="padding: 5px;">
+            <p-button class="add" (click)="_configEmulNavigatorToTrue()" icon="fa fa-plus-square-o" iconPos="right" label="emul"></p-button>
+            <p-button class="add" (click)="_add()" icon="fa fa-plus-square-o" iconPos="right" label="New entity"></p-button>
+            <p-button class="add" (click)="_saveEntity()" icon="fa fa-floppy-o" iconPos="right" label="Save"></p-button>
+            <p-button class="add" (click)="_deleteEntity()" icon="fa fa-trash-o" iconPos="right" label="Delete"></p-button>
+            <p-button class="add" (click)="onBack()" icon="fa fa-angle-double-left" iconPos="right" label="Back"></p-button>
+            <p-splitButton label="Actions" icon="fa fa-pi-check" (onClick)="save()" [model]="items"></p-splitButton>
+        </div>
+        <div style="padding: 5px;">
+            <span>
+                <p-button class="add" (click)="first()" icon="fa fa-angle-double-left" style="font-size: 1.5em"></p-button>
+            </span>
+            <span>
+                <p-button class="add" (click)="prev()" icon="fa fa-chevron-circle-left" style="font-size: 1.5em"></p-button>
+            </span>
+            <span>
+                <p-button class="add" (click)="_saveEntity()" icon="fa fa-check" styleClass="ui-button-success" style="font-size: 1.5em"></p-button>
+            </span>
+            <span>
+                <p-button class="add" (click)="_deleteEntity()" icon="fa fa-times-circle" styleClass="ui-button-danger" style="font-size: 1.5em"></p-button>
+            </span>
+            <span>
+                <p-button class="add" (click)="next()" icon="fa fa-chevron-circle-right" style="font-size: 1.5em"></p-button>
+            </span>
+            <span>
+                <p-button class="add" (click)="last()" icon="fa fa-angle-double-right" style="font-size: 1.5em"></p-button>
+            </span>
+        </div>
+    </fieldset>
+</ng-template>
+<div #1 class="container-fluid text-center">
+    <div #1 class="row content">
+        <div #ag class="myClass" [ngStyle]="gridStyles">
+            <div class="button-bar">
+                <button (click)="sizeToFit()">Size to Fit</button>
+                <button (click)="autoSizeAll()">Auto-Size All</button>
+            </div>
+            <ag-grid-angular oncontextmenu="return false" [ngStyle]="agStyles" class="ag-theme-balham" [enableServerSideSorting]="true"
+                [enableServerSideFilter]="true" [columnDefs]="selectedColumns" [enableColResize]="true" (gridReady)="onGridReady($event)"
+                [rowModelType]="rowModelType" [navigateToNextCell]="navigateToNextCell" [rowSelection]="rowSelection" (selectionChanged)="onSelectionChanged($event)"
+                (cellValueChanged)="onCellValueChanged($event)" (cellContextMenu)="onCellContextMenu($event)" (rowDoubleClicked)="onRowDoubleClicked($event)"
+                [frameworkComponents]="frameworkComponents" [infiniteInitialRowCount]="infiniteInitialRowCount"
+                [defaultColDef]="defaultColDef"
+                [rowClassRules]="rowClassRules" [getRowHeight]="getRowHeight"
+                >
+            </ag-grid-angular>
+            <!-- <modal-modal2 [appMoveTemplate]="condition" count></modal-modal2> -->
+            <div class="row content" *ngIf="adminData && adminData.isAdmin">
+                <ng-container *ngTemplateOutlet="modal1">
+                </ng-container>
+            </div>
+        </div>
+        <div #page [ngStyle]="pageStyles">
+            <ng-container *ngIf="myComponentLoaded">
+                <my-component context="dataclass"></my-component>
+            </ng-container>
+        </div>
+        <!-- <p-confirmDialog header="Confirmation" appendTo="body" icon="fa fa-question-circle" width="425"></p-confirmDialog> -->
+    </div>
+
+</div>

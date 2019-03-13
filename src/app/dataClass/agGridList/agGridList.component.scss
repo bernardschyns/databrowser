@@ -1,0 +1,65 @@
+
+header{
+    position: absolute;
+    top:10%;
+    height: 70%;
+    width: 95%;
+    overflow: scroll;
+
+}
+footer{
+    position: absolute;
+    top:80%;
+    height: 25%;
+    width: 100%;
+}
+fieldset{
+    margin:15px;
+    background-color: floralwhite;
+    width: 550px;
+    height: 120px;
+    border: thick double #32a1ce;
+    // position: absolute;
+    // top: 80px;
+    // left: 40%;
+    z-index: 10;
+}
+p-button.ui-button-warning{
+    color: greenyellow
+}
+.row.content {height:auto;}
+.dataListe {
+    direction: rtl;
+    font-size:12px;
+    margin:3px 10px 3px 3px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.dataLabel {
+    direction: rtl;
+    font-size:12px;
+    margin: 3px 0 3px 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.dataTotal {
+    direction: rtl;
+    font-size:12px;
+    margin: 3px 0 3px 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.total {
+    position: relative;
+    margin: 3px 0 3px 5px;
+    left:  320px;
+    font-weight: 600;
+}
+section{
+	font-weight: normal;
+	font-size: 80%;
+	line-height: 100%;
+	width: auto;
+	padding: 5px 1% 0 1%;
+	border-bottom: 2px dotted #ccc
+}

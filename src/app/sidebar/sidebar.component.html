@@ -1,0 +1,48 @@
+<div class="sidebar-wrapper">
+    <div class="logo">
+        <a href="https://wakanda.github.io/" class="simple-text">
+            <div class="logo-img">
+                <img src="/assets/img/wakanda-full-light-bg.png"/>
+            </div>            
+        </a>
+    </div>
+    <div class="dataStoreURL">
+        <input type="text" pInputText [(ngModel)]="dataStoreUrl"/>
+        <p-button (onClick)="loadCatalog()" label="Load"></p-button>
+    </div>
+    <!-- Datenklassen anzeigen -->
+        <p-dataList [value]="dataClasses3" [paginator]="false"  [immutable]="true">
+            <p-header>
+                Datastore Classes
+            </p-header>
+            <ng-template let-dataClass pTemplate="item">
+                    <span class="fileLineBody">
+                <div fxFlex="100" class="dataClass" (click)="loadDataClass(dataClass.name.name,dataClass.liste,dataClass.page)">{{dataClass.name.name}} <span class="dataListe">{{dataClass.liste}} {{dataClass.page}}</span></div>
+                <label class="dataLabel">liste</label>
+                <p-autoComplete class="dataListe" data-dataClass="Joueur" pInputText value="bonjour" [(ngModel)]=dataClass.liste field="nom" [suggestions]="selectData"
+                (completeMethod)="filterBrands($event,dataClass.name,'dataListesStoreChanges')" [size]="9" [minLength]="1" [placeholder]=dataClass.liste [dropdown]="true"
+                [ngModelOptions]="{standalone: true}">
+                <ng-template let-brand pTemplate="item2">
+                    <div class="ui-helper-clearfix" style="border-bottom:1px solid #D5D5D5">
+                        <div style="font-size:12px;float:left;margin:5px 5px 0 0">{{brand}}</div>
+                    </div>
+                    
+                </ng-template>               
+            </p-autoComplete>
+            <label class="dataLabel">page</label>
+            <p-autoComplete class="dataListe" data-dataClass="Joueur" pInputText value="bonjour" [(ngModel)]=dataClass.page field="nom" [suggestions]="selectData"
+            (completeMethod)="filterBrands($event,dataClass.name,'dataClassesStoreChanges')" [size]="9" [minLength]="1" [placeholder]=dataClass.page [dropdown]="true"
+            [ngModelOptions]="{standalone: true}">
+            <ng-template let-brand pTemplate="item2">
+                <div class="ui-helper-clearfix" style="border-bottom:1px solid #D5D5D5">
+                    <div style="font-size:12px;float:left;margin:5px 5px 0 0">{{brand}}</div>
+                </div>
+            </ng-template>
+        </p-autoComplete>
+            </span>
+            <section>
+                </section>
+            </ng-template>    
+        </p-dataList>   
+</div>
+
